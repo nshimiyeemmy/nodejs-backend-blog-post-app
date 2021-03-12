@@ -1,0 +1,46 @@
+GET http://localhost:2000
+###
+GET http://localhost:2000/abc
+###
+POST http://localhost:2000/api/users
+Content-Type: application/json
+
+{
+"first_name":"Jacques",
+"last_name":"twringiyi",
+"role":"client",
+"email":"emm@gmail.com",
+"password":"Nshimiye123"
+}
+###
+POST http://localhost:2000/api/post_types
+Content-Type: application/json
+
+{
+    "post_type_name":"Javascript"
+}
+
+###
+POST http://localhost:2000/api/users/login
+Content-Type: application/json
+
+{
+    "email":"emm@gmail.com",
+    "password":"Nshimiye123"
+}
+
+
+###
+POST http://localhost:2000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzM2NmRiZmQ1NDhjMmE3ODMyZjdlZiIsImZ1bGxuYW1lcyI6IkRhbmllbCBEdWt1bmRhbmUiLCJlbWFpbCI6ImRhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE2MDY2NTMyNTV9.PW1VXX5B5ZJlcuoTILkDmA7v2SXHM8cDoySyTPrV-yU
+
+{
+"title":"Learn",
+"description":"twringiyi",
+"dateCreated":"2000",
+"post_types":"5fc394313278182df8330355"
+}
+
+
+
